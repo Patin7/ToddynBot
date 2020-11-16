@@ -1,0 +1,17 @@
+{
+    "bot":{
+        "token":"token",
+        "prefix":"prefixo",
+        "clientid":"id do bot"
+    },
+    "creditos":{
+        "criador":"@!  Prazer, Patin. 🖤#6279",
+        "id":"516000715391369236",
+        "youtube":"https://www.youtube.com/channel/UCsSUdUUeEph8vkeB8_xhcog"
+    },
+    "cores":{
+        "vermelha":"RED",
+        "azul":"BLUE",
+        "verde":"GREEN"
+    }
+}

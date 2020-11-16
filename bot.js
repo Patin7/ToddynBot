@@ -18,6 +18,7 @@ const config = require("./config/client/config.json")
 const fs = require("fs")
 
 const client = new Discord.Client();
+client.fs = fs;
 //modulos
 fs.readdir("./eventos/", (err, files) => {//eventos nas pastas
     if (err) return console.log(`evento mal executado, por causa do erro: ${err}`);
@@ -29,11 +30,11 @@ fs.readdir("./eventos/", (err, files) => {//eventos nas pastas
         client.on(eventoNome, evento.bind(null, client));//pegando o eventos.
     });
 });
-client.commands = new Discord.Collection();
+client.comandos = new Discord.Collection();
 client.aliases = new Discord.Collection();
 
-["command"].forEach(handler => { 
-require(`./handlers/${handler}`)(client)
+["comandos"].forEach(handler => { 
+    require(`./handlers/${handler}`)(client)
 })
 
 client.login(config.bot.token)
